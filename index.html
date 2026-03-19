@@ -212,11 +212,9 @@
         video.addEventListener("click", () => {
           const item = video.closest(".item");
 
-          video.controls = true;
           video.muted = false;
-          video.autoplay = false;
           video.loop = false;
-          video.play();
+          video.controls = true;
 
           item.classList.add("active");
         });
