@@ -122,7 +122,7 @@ body {
   pointer-events: none;
 }
 
-.item::after {
+.item_variant_image::after {
   content: "view";
   font-size: 35px;
   position: absolute;
@@ -135,6 +135,10 @@ body {
   pointer-events: none;
 }
 
+.item:hover::after {
+  opacity: 1;
+}
+
 .item:not(.active):hover::before {
   opacity: 1;
 }
@@ -145,6 +149,25 @@ body {
 
 .item_variant_video {
   background-color: black;
+  position: relative;
+}
+
+.item_variant_video::after {
+  border: 24px solid transparent;
+  border-left: 43px solid white;
+  content: "";
+  height: 0;
+  left: 55%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  width: 0;
+  pointer-events: none;
+}
+
+.item.active::after {
+  opacity: 0;
 }
 
 .item-link {
