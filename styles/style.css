@@ -107,9 +107,9 @@ body {
 
   background-color: white;
   overflow: hidden;
-}
 
-.item_variant_image {
+  cursor: pointer;
+
   &::before {
     content: "";
     position: absolute;
@@ -135,16 +135,14 @@ body {
     color: white;
     pointer-events: none;
   }
+}
 
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
+.item:not(.active):hover::before {
+  opacity: 1;
+}
 
-    &::after {
-      opacity: 1;
-    }
-  }
+.item:not(.active):hover::after {
+  opacity: 1;
 }
 
 .item_variant_video {
